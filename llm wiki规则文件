@@ -21,10 +21,29 @@
 本层代表经过 AI 深度解构、高度互联、完美兼容 Obsidian 双链的“第二大脑”。此目录下的所有文件必须是标准的 Markdown (.md) 格式。
 
 - `/wiki/index.md`: 🗺️ 全局核心大纲与索引（主页）。由 AI 统一维护，按业务/学科分类动态聚合所有 Wiki 页面的入口。
-- `/wiki/concepts/`: 🧠 抽象概念与架构原理。存放硬核技术原理、系统设计模式、规范标准（例如：`MCP协议.md`）。
-- `/wiki/entities/`: 🏢 实体与项目卡片。存放关于特定具体事物（人、团队、工具、项目、DTS缺陷单）的背景和直达链接。
-- `/wiki/logs/`: ⏳ 流水线摘要与解构日志。针对 `/raw/` 里的某一个特定音视频、大 PDF 或硬核文章生成的单篇详尽转录摘要与结构化脑图。
-- `/wiki/artifacts/`: 🛠️ 高质量代码与配置片段。存放高频使用的脚本、Docker 镜像配置、或者实用的 Python MCP 核心代码段。
+- `/wiki/concepts/`: 🧠 **抽象概念与架构原理 (Abstract Theories & Standards)**
+  - **做什么**：存放纯粹的通识技术原理、规范标准、设计模式和不随具体项目消亡的硬核定理。
+  - **正向包含**：高并发架构、Spring Bean 生命周期、Git 引用日志原理、华为代码安全规范。
+  - **逆向红线**：严禁包含任何具体的项目名称、特定员工名字或临时的缺陷单号（这些属于 entities）。
+  - **文件命名示例**：`Distributed_Lock_Principles.md`, `Java_Filter_Specification.md`
+
+- `/wiki/entities/`: 🏢 **实体与项目卡片 (Physical Entities & Dynamic Projects)**
+  - **做什么**：存放现实世界中独立存在的、有生命周期的具体对象档案、项目档案或特定事件单据。
+  - **正向包含**：具体的项目名称（如 `APITest_old`）、特定的团队成员（如 `架构师张三`）、特定的缺陷单号（如 `DTS_1024`）。
+  - **逆向红线**：严禁在此处长篇大论解释底层技术原理（原理必须抽象出去并用双链 `[[Links]]` 引入）。
+  - **文件命名示例**：`Project_APITest_old.md`, `DTS_Ticket_1024.md`
+
+- `/wiki/logs/`: ⏳ **流水线摘要与解构日志 (Chronological Media Transcripts)**
+  - **做什么**：专为 `/raw/` 下的长篇多媒体（音视频、大 PDF、长篇转录稿）提供第一人称的时间轴流水账摘要。
+  - **正向包含**：针对特定视频转录出来的分分钟技术纪要、针对单篇顶尖学术论文的章节速读结构脑图。
+  - **逆向红线**：此目录文件具有强烈的“原材料依附性”，通常一版定型，后续的通用知识提炼必须分流去 concepts，严禁在此无限追加系统级架构。
+  - **文件命名示例**：`Log_20260520_Backend_Debug_Session.md`, `Summary_Llama3_Paper.md`
+
+- `/wiki/artifacts/`: 🛠️ **高质量代码与配置片段 (Reusable Snippets & Configs)**
+  - **做什么**：存放高频复用、经过生产验证的代码小抄、工程脚本、Docker 配置或环境白皮书片段。
+  - **正向包含**：万能 Java 跨域过滤器源码、完美的 `CLAUDE.md` 模板、标准 Nginx 离线配置文件。
+  - **逆向红线**：必须是结构化、带高亮和注释的纯干货代码片段，严禁塞入大段的会议闲聊文字或宽泛的背景介绍。
+  - **文件命名示例**：`Artifact_Java_CORS_Filter.md`, `Artifact_Docker_Compose_Dev.md`
 
 ---
 
